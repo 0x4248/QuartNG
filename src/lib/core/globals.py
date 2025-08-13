@@ -2,8 +2,12 @@ import subprocess
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 import os
+import json
 
 
+with open("src/config.json") as f:
+    data = json.load(f)
+    PLUGINS = data.get("plugins", [])
 
 NAME = "QuartNG"
 AUTHOR = "0x4248"
@@ -38,7 +42,3 @@ JNINJA_ENV = Environment(loader=FileSystemLoader(template_path))
 
 RATE_LIMIT = 20
 RATE_LIMI_TIME_WINDOW = 20
-
-PLUGINS = [
-	"lib.plugins.home"
-]
