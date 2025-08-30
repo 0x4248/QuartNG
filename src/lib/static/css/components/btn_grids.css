@@ -1,0 +1,37 @@
+.btn_row_container,
+.btn_row_container_center {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1px;
+  height: 100px;
+box-sizing: border-box;
+  width: 100%;
+}
+
+.btn_row_container_center {
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_row_container_center > * {
+    height: 100%;
+  min-width: 100px;
+  border: 2px solid var(--color-link);
+  background: var(--color-background);
+  color: var(--color-text);
+  padding: 12px;
+  cursor: pointer;
+}
+
+.grid_btn:hover {
+  background: var(--color-text-highlight);
+}
+
+@media screen and (max-width: 600px) {
+  .btn_row_container,
+  .btn_row_container_center {
+    grid-template-columns: repeat(5, 1fr); /* 3 per row */
+    grid-auto-flow: row;
+    height: auto; /* let rows grow */
+  }
+}

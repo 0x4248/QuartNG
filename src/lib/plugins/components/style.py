@@ -22,15 +22,23 @@ def half_split(left: list, right: list, class_name: str = "") -> str:
     """
 
 
-def wrap_class(content: list, class_name: str) -> str:
+def wrap_class(class_name: str, content: list) -> str:
     """
     Wraps content with a class using a <div> class. Lets say you have a CSS class called
     center-text and want to set it for a specific chunk of content.
     """
     return f'<div class="{class_name}">{compile(content)}</div>'
 
+def stick(content: list, position: str = "bottom", with_to_100: bool = True, class_name: str = "") -> str:
+    """
+    Sticks content to a specific position on the screen.
+    """
+    if with_to_100:
+        return f'<div style="position: fixed; {position}: 0; width: 100%;">{compile(content)}</div>'
+    return f'<div style="position: fixed; {position}: 0;">{compile(content)}</div>'
 
-class Link:
+
+class link:
     def text_decor(link: str, text: str, decoration_l: str = "[", decoration_r: str = "]") -> str:
         """
         Makes a link have text decorations

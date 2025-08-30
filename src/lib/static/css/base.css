@@ -10,14 +10,6 @@
 	--color-link-visited: rgb(102, 219, 255);
 	--color-codeblock-background: #1a1a1a;
 	--color-hr: #b4b4b4;
-	--color-owner-role: #5db6ff;
-	--color-owner-role-background: #5db6ff2d;
-	--color-admin-role: #ff5d5d;
-	--color-admin-role-background: #ff5d5d2d;
-	--color-moderator-role: #ffb65d;
-	--color-moderator-role-background: #ffb65d2d;
-	--color-member-role: #5dff5d;
-	--color-member-role-background: #5dff5d2d;
 }
 
 * {
@@ -57,49 +49,8 @@ hr {
 	width: 100%;
 }
 
-.owner_role {
-	font-size: 80%;
-	border: 1px solid var(--color-owner-role);
-	color: var(--color-owner-role);
-	background: var(--color-owner-role-background);
-}
-
-.admin_role {
-	font-size: 80%;
-	border: 1px solid var(--color-admin-role);
-	color: var(--color-admin-role);
-	background: var(--color-admin-role-background);
-}
-
-.moderator_role {
-	font-size: 80%;
-	border: 1px solid var(--color-moderator-role);
-	color: var(--color-moderator-role);
-	background: var(--color-moderator-role-background);
-}
-
-.member_role {
-	font-size: 80%;
-	border: 1px solid var(--color-member-role);
-	color: var(--color-member-role);
-	background: var(--color-member-role-background);
-}
-
-.center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-}
-
 button, textarea, input, select {
     border: 2px solid var(--color-link);
-    border-radius: 4px;
-}
-
-.text-center {
-	text-align: center;
 }
 
 img{
@@ -125,7 +76,7 @@ blockquote {
 	padding-left: 10px;
 }
 
-:root {
+/* :root {
 	--color-background: #1e1e2e;
 	--color-background-alt: #45475a;
 	--color-text: #cdd6f4;
@@ -134,12 +85,4 @@ blockquote {
 	--color-link-visited: #89dceb;
 	--color-codeblock-background: #313244;
 	--color-hr: #9399b2;
-	--color-owner-role: #89b4fa;
-	--color-owner-role-background: #89b4fa42;
-	--color-admin-role: #f38ba8;
-	--color-admin-role-background: #f38ba859;
-	--color-moderator-role: #fab387;
-	--color-moderator-role-background: #fab3874b;
-	--color-member-role: #a6e3a1;
-	--color-member-role-background: #a6e3a146;
-}
+} */

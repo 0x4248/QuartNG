@@ -17,15 +17,31 @@ async def home(request: Request):
     return returnPage(
         request=request,
         top_components=[
-            c.base.h(1, "Hello Ella"),
+            c.base.h(1, "PAGE: DEMO"),
             c.base.hr(),
         ],
         main_components=[
-            c.base.h(2, "This is a test"),
-            c.lorem.lorem_ipsum_p(4)
+            c.base.h(2, "SYSTEM DEMO"),
         ],
-        bottom_components=[
-            c.base.hr(),
-            c.base.p("This is the bottom text", class_name="hello")  
-        ]
-    )
+        bottom_components=
+                c.style.stick([
+                    c.base.hr(),
+                    c.btn_grids.row_container_center([
+                        "<button>FN1</button>",
+                        "<button>FN2</button>",
+                        "<button>FN3</button>",
+                        "<button>FN4</button>",
+                        "<button>FN5</button>",
+                        "<button>HOME</button>",
+                        "<button style='color: red;'>DEL</button>",
+                        "<button>BACK</button>",
+                        "<button>↑</button>",
+                        "<button>FWD</button>",
+                        "<button>FLAG</button>",
+                        "<button>CLEAR</button>",
+                        "<button>←</button>",
+                        "<button>↓</button>",
+                        "<button>→</button>",
+                ])
+            ])
+        )

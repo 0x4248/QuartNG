@@ -6,6 +6,8 @@ from lib.core.responses import String
 from lib.core.globals import JNINJA_ENV
 
 from lib.core import globals as GLOBAL
+from lib.core import css as core_css
+from lib.core import logger
 import markdown
 
 def compile(components: list) -> str:
@@ -29,8 +31,11 @@ def returnPage(request: Request,
                 status_code: int = 200,
                 css: str = None) -> HTMLResponse:
 
-    with open("src/lib/static/css/base.css", "r") as f:
-        css = f.read()
+    logger.log("page_compile", "Compiling page "+title)
+
+    css = core_css.compile_css()
+    if css is None or css == "":
+        logger.log_warning("page_compile", "No CSS compiled, check config.json for missing css params")
 
     top = compile(top_components)
     main = compile(main_components)

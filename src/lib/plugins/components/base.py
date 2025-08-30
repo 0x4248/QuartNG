@@ -16,3 +16,6 @@ def strong(content: str, class_name: str = "", id: str = "") -> str:
 
 def hr() -> str:
     return "<hr>"
+
+def br() -> str:
+    return "<br>"

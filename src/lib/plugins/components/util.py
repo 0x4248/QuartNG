@@ -1,4 +1,4 @@
-class Time:
+class time:
     def current(wrap_element="span", self_update=False) -> str:
             """ Returns the current time in a formatted string.
             """
@@ -18,3 +18,4 @@ class Time:
                     }}, 1000);
                 </script>
                 """
+        

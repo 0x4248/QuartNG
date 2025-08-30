@@ -8,11 +8,11 @@ import json
 with open("src/config.json") as f:
     data = json.load(f)
     PLUGINS = data.get("plugins", [])
+    CSS = data.get("css", [])
 
 NAME = "QuartNG"
 AUTHOR = "0x4248"
-DESCRIPTION = ""
-
+DESCRIPTION = "This is the default description for QuartNG, you can change it in globals.py"
 
 def get_git_ref():
 	try:
@@ -38,7 +38,3 @@ SERVER_ENGINE = "QNG"
 INIT = False
 template_path = os.path.join(os.path.dirname(__file__), "../static/templates")
 JNINJA_ENV = Environment(loader=FileSystemLoader(template_path))
-
-
-RATE_LIMIT = 20
-RATE_LIMI_TIME_WINDOW = 20
